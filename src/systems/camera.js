@@ -104,6 +104,7 @@ module.exports.System = registerSystem('camera', {
 
     // Set up default camera.
     defaultCameraEl = document.createElement('a-entity');
+    defaultCameraEl.classList.add(DEFAULT_CAMERA_ATTR);
     defaultCameraEl.setAttribute('camera', {active: true});
     defaultCameraEl.setAttribute('position', {
       x: 0,
