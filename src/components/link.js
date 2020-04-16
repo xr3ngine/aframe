@@ -163,7 +163,10 @@ module.exports.Component = registerComponent('link', {
   },
 
   navigate: function () {
-    window.location = this.data.href;
+    // Don't refresh page on navigate if no href is supplied
+    if (this.data.href) {
+      window.location = this.data.href;
+    }
   },
 
   /**
